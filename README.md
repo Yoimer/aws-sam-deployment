@@ -133,3 +133,7 @@ Go back to ``` sam-app ``` folder , rebuild and repackage the whole project and 
 ```sam deploy --region us-west-2 --capabilities CAPABILITY_IAM --template-file package.yml --stack-name sam-app```.
 
 If all went go, you should see the updates on the lambdas and API gateways as well \0/ \0/ :) .
+
+# How to delete all the application from the SAM CLI (Be careful when using this command!, AWS deletes all quite quick!!!).
+
+``` aws cloudformation delete-stack --stack-name sam-app ```
