@@ -33,6 +33,18 @@ Resources:
           Properties:
             Path: /clock
             Method: get
+  ConvertTimeFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: ConvertTimeFunction
+      Handler: handler.ConvertTime
+      Runtime: nodejs10.x
+      Events:
+        ConvertTimeAPI:
+          Type: Api
+          Properties:
+            Path: /convert-time
+            Method: get
 Outputs:
   HelloWorldApi:
     Description: API Gateway endpoint URL for Prod stage for Hello World function
